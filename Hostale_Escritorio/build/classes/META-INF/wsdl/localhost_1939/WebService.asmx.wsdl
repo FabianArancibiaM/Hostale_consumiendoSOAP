@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidarLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StockProductos">
+        <s:complexType />
+      </s:element>
+      <s:element name="StockProductosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StockProductosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Productos_mas_solicitados">
+        <s:complexType />
+      </s:element>
+      <s:element name="Productos_mas_solicitadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Productos_mas_solicitadosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Segun_rubro_empresa">
+        <s:complexType />
+      </s:element>
+      <s:element name="Segun_rubro_empresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Segun_rubro_empresaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Metodo_pago_mas_usado">
+        <s:complexType />
+      </s:element>
+      <s:element name="Metodo_pago_mas_usadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Metodo_pago_mas_usadoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ciudad_mas_solicita_servicios">
+        <s:complexType />
+      </s:element>
+      <s:element name="Ciudad_mas_solicita_serviciosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ciudad_mas_solicita_serviciosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Promedio_Edad">
+        <s:complexType />
+      </s:element>
+      <s:element name="Promedio_EdadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Promedio_EdadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Estado_habitaciones">
+        <s:complexType />
+      </s:element>
+      <s:element name="Estado_habitacionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Estado_habitacionesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Habitaciones_mas_solicitadas">
+        <s:complexType />
+      </s:element>
+      <s:element name="Habitaciones_mas_solicitadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Habitaciones_mas_solicitadasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Fecha_mayor_auge">
+        <s:complexType />
+      </s:element>
+      <s:element name="Fecha_mayor_augeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Fecha_mayor_augeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Solicitudes_NO_terminadas">
+        <s:complexType />
+      </s:element>
+      <s:element name="Solicitudes_NO_terminadasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Solicitudes_NO_terminadasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Promedio_venta_mensual">
+        <s:complexType />
+      </s:element>
+      <s:element name="Promedio_venta_mensualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Promedio_venta_mensualResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Promedio_perdida_mensual">
+        <s:complexType />
+      </s:element>
+      <s:element name="Promedio_perdida_mensualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Promedio_perdida_mensualResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Porcentage_cierre_efectivo">
+        <s:complexType />
+      </s:element>
+      <s:element name="Porcentage_cierre_efectivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Porcentage_cierre_efectivoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarLogin" />
+  </wsdl:message>
+  <wsdl:message name="ValidarLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="StockProductosSoapIn">
+    <wsdl:part name="parameters" element="tns:StockProductos" />
+  </wsdl:message>
+  <wsdl:message name="StockProductosSoapOut">
+    <wsdl:part name="parameters" element="tns:StockProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Productos_mas_solicitadosSoapIn">
+    <wsdl:part name="parameters" element="tns:Productos_mas_solicitados" />
+  </wsdl:message>
+  <wsdl:message name="Productos_mas_solicitadosSoapOut">
+    <wsdl:part name="parameters" element="tns:Productos_mas_solicitadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Segun_rubro_empresaSoapIn">
+    <wsdl:part name="parameters" element="tns:Segun_rubro_empresa" />
+  </wsdl:message>
+  <wsdl:message name="Segun_rubro_empresaSoapOut">
+    <wsdl:part name="parameters" element="tns:Segun_rubro_empresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Metodo_pago_mas_usadoSoapIn">
+    <wsdl:part name="parameters" element="tns:Metodo_pago_mas_usado" />
+  </wsdl:message>
+  <wsdl:message name="Metodo_pago_mas_usadoSoapOut">
+    <wsdl:part name="parameters" element="tns:Metodo_pago_mas_usadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ciudad_mas_solicita_serviciosSoapIn">
+    <wsdl:part name="parameters" element="tns:Ciudad_mas_solicita_servicios" />
+  </wsdl:message>
+  <wsdl:message name="Ciudad_mas_solicita_serviciosSoapOut">
+    <wsdl:part name="parameters" element="tns:Ciudad_mas_solicita_serviciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Promedio_EdadSoapIn">
+    <wsdl:part name="parameters" element="tns:Promedio_Edad" />
+  </wsdl:message>
+  <wsdl:message name="Promedio_EdadSoapOut">
+    <wsdl:part name="parameters" element="tns:Promedio_EdadResponse" />
+  </wsdl:message>
+  <wsdl:message name="Estado_habitacionesSoapIn">
+    <wsdl:part name="parameters" element="tns:Estado_habitaciones" />
+  </wsdl:message>
+  <wsdl:message name="Estado_habitacionesSoapOut">
+    <wsdl:part name="parameters" element="tns:Estado_habitacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Habitaciones_mas_solicitadasSoapIn">
+    <wsdl:part name="parameters" element="tns:Habitaciones_mas_solicitadas" />
+  </wsdl:message>
+  <wsdl:message name="Habitaciones_mas_solicitadasSoapOut">
+    <wsdl:part name="parameters" element="tns:Habitaciones_mas_solicitadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="Fecha_mayor_augeSoapIn">
+    <wsdl:part name="parameters" element="tns:Fecha_mayor_auge" />
+  </wsdl:message>
+  <wsdl:message name="Fecha_mayor_augeSoapOut">
+    <wsdl:part name="parameters" element="tns:Fecha_mayor_augeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Solicitudes_NO_terminadasSoapIn">
+    <wsdl:part name="parameters" element="tns:Solicitudes_NO_terminadas" />
+  </wsdl:message>
+  <wsdl:message name="Solicitudes_NO_terminadasSoapOut">
+    <wsdl:part name="parameters" element="tns:Solicitudes_NO_terminadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="Promedio_venta_mensualSoapIn">
+    <wsdl:part name="parameters" element="tns:Promedio_venta_mensual" />
+  </wsdl:message>
+  <wsdl:message name="Promedio_venta_mensualSoapOut">
+    <wsdl:part name="parameters" element="tns:Promedio_venta_mensualResponse" />
+  </wsdl:message>
+  <wsdl:message name="Promedio_perdida_mensualSoapIn">
+    <wsdl:part name="parameters" element="tns:Promedio_perdida_mensual" />
+  </wsdl:message>
+  <wsdl:message name="Promedio_perdida_mensualSoapOut">
+    <wsdl:part name="parameters" element="tns:Promedio_perdida_mensualResponse" />
+  </wsdl:message>
+  <wsdl:message name="Porcentage_cierre_efectivoSoapIn">
+    <wsdl:part name="parameters" element="tns:Porcentage_cierre_efectivo" />
+  </wsdl:message>
+  <wsdl:message name="Porcentage_cierre_efectivoSoapOut">
+    <wsdl:part name="parameters" element="tns:Porcentage_cierre_efectivoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarLogin">
+      <wsdl:input message="tns:ValidarLoginSoapIn" />
+      <wsdl:output message="tns:ValidarLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StockProductos">
+      <wsdl:input message="tns:StockProductosSoapIn" />
+      <wsdl:output message="tns:StockProductosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Productos_mas_solicitados">
+      <wsdl:input message="tns:Productos_mas_solicitadosSoapIn" />
+      <wsdl:output message="tns:Productos_mas_solicitadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Segun_rubro_empresa">
+      <wsdl:input message="tns:Segun_rubro_empresaSoapIn" />
+      <wsdl:output message="tns:Segun_rubro_empresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_pago_mas_usado">
+      <wsdl:input message="tns:Metodo_pago_mas_usadoSoapIn" />
+      <wsdl:output message="tns:Metodo_pago_mas_usadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ciudad_mas_solicita_servicios">
+      <wsdl:input message="tns:Ciudad_mas_solicita_serviciosSoapIn" />
+      <wsdl:output message="tns:Ciudad_mas_solicita_serviciosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Promedio_Edad">
+      <wsdl:input message="tns:Promedio_EdadSoapIn" />
+      <wsdl:output message="tns:Promedio_EdadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Estado_habitaciones">
+      <wsdl:input message="tns:Estado_habitacionesSoapIn" />
+      <wsdl:output message="tns:Estado_habitacionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Habitaciones_mas_solicitadas">
+      <wsdl:input message="tns:Habitaciones_mas_solicitadasSoapIn" />
+      <wsdl:output message="tns:Habitaciones_mas_solicitadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Fecha_mayor_auge">
+      <wsdl:input message="tns:Fecha_mayor_augeSoapIn" />
+      <wsdl:output message="tns:Fecha_mayor_augeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Solicitudes_NO_terminadas">
+      <wsdl:input message="tns:Solicitudes_NO_terminadasSoapIn" />
+      <wsdl:output message="tns:Solicitudes_NO_terminadasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Promedio_venta_mensual">
+      <wsdl:input message="tns:Promedio_venta_mensualSoapIn" />
+      <wsdl:output message="tns:Promedio_venta_mensualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Promedio_perdida_mensual">
+      <wsdl:input message="tns:Promedio_perdida_mensualSoapIn" />
+      <wsdl:output message="tns:Promedio_perdida_mensualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Porcentage_cierre_efectivo">
+      <wsdl:input message="tns:Porcentage_cierre_efectivoSoapIn" />
+      <wsdl:output message="tns:Porcentage_cierre_efectivoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarLogin">
+      <soap:operation soapAction="http://tempuri.org/ValidarLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockProductos">
+      <soap:operation soapAction="http://tempuri.org/StockProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Productos_mas_solicitados">
+      <soap:operation soapAction="http://tempuri.org/Productos_mas_solicitados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Segun_rubro_empresa">
+      <soap:operation soapAction="http://tempuri.org/Segun_rubro_empresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_pago_mas_usado">
+      <soap:operation soapAction="http://tempuri.org/Metodo_pago_mas_usado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ciudad_mas_solicita_servicios">
+      <soap:operation soapAction="http://tempuri.org/Ciudad_mas_solicita_servicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Promedio_Edad">
+      <soap:operation soapAction="http://tempuri.org/Promedio_Edad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Estado_habitaciones">
+      <soap:operation soapAction="http://tempuri.org/Estado_habitaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Habitaciones_mas_solicitadas">
+      <soap:operation soapAction="http://tempuri.org/Habitaciones_mas_solicitadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fecha_mayor_auge">
+      <soap:operation soapAction="http://tempuri.org/Fecha_mayor_auge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Solicitudes_NO_terminadas">
+      <soap:operation soapAction="http://tempuri.org/Solicitudes_NO_terminadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Promedio_venta_mensual">
+      <soap:operation soapAction="http://tempuri.org/Promedio_venta_mensual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Promedio_perdida_mensual">
+      <soap:operation soapAction="http://tempuri.org/Promedio_perdida_mensual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Porcentage_cierre_efectivo">
+      <soap:operation soapAction="http://tempuri.org/Porcentage_cierre_efectivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarLogin">
+      <soap12:operation soapAction="http://tempuri.org/ValidarLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StockProductos">
+      <soap12:operation soapAction="http://tempuri.org/StockProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Productos_mas_solicitados">
+      <soap12:operation soapAction="http://tempuri.org/Productos_mas_solicitados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Segun_rubro_empresa">
+      <soap12:operation soapAction="http://tempuri.org/Segun_rubro_empresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Metodo_pago_mas_usado">
+      <soap12:operation soapAction="http://tempuri.org/Metodo_pago_mas_usado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ciudad_mas_solicita_servicios">
+      <soap12:operation soapAction="http://tempuri.org/Ciudad_mas_solicita_servicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Promedio_Edad">
+      <soap12:operation soapAction="http://tempuri.org/Promedio_Edad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Estado_habitaciones">
+      <soap12:operation soapAction="http://tempuri.org/Estado_habitaciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Habitaciones_mas_solicitadas">
+      <soap12:operation soapAction="http://tempuri.org/Habitaciones_mas_solicitadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Fecha_mayor_auge">
+      <soap12:operation soapAction="http://tempuri.org/Fecha_mayor_auge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Solicitudes_NO_terminadas">
+      <soap12:operation soapAction="http://tempuri.org/Solicitudes_NO_terminadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Promedio_venta_mensual">
+      <soap12:operation soapAction="http://tempuri.org/Promedio_venta_mensual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Promedio_perdida_mensual">
+      <soap12:operation soapAction="http://tempuri.org/Promedio_perdida_mensual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Porcentage_cierre_efectivo">
+      <soap12:operation soapAction="http://tempuri.org/Porcentage_cierre_efectivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:1939/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:1939/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
